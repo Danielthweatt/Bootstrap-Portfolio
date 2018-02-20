@@ -1,0 +1,38 @@
+/* 
+heading 1 color and header and main content background: 
+#ffffff;
+headings 2 and 3 color and heading 1 background and 
+footer border and button color: #4aaaa5;
+header, h2 and h3 border color: #cccccc;
+main content border color: #dddddd;
+footer background: #666666;
+font color: #777777;
+heading font-family: 'Georgia', Times, Times New Roman, serif;
+other font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+*/
+
+/* Global Styles */
+
+/* Header Style */
+
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #cccccc;
+}
+
+h1 {
+    color: #ffffff;
+    background-color:#4aaaa5; 
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0;
+}
+
+nav {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
