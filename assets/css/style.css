@@ -13,6 +13,11 @@ other font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 
 /* Global Styles */
 
+body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777777;
+}
+
 /* Header Style */
 
 header {
@@ -74,6 +79,21 @@ section {
     box-sizing: border-box;
 }
 
+.content {
+    margin: 25px 20px 30px;
+    overflow: auto;
+}
+
+section img {
+    float: left;
+    margin-right: 20px;
+}
+
+section p {
+    line-height: 2.0;
+    font-size: 16px;
+}
+
 aside {
     background-color: #ffffff;
     border: 1px solid #dddddd;
@@ -87,4 +107,13 @@ aside ul {
 
 aside img {
     width: 60px;
+}
+
+/* Footer Styles */
+
+footer {
+    border-top: 6px solid #4aaaa5;
+    background-color: #666666;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
