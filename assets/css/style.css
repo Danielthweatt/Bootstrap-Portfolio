@@ -36,3 +36,55 @@ nav {
     margin-top: 15px;
     margin-bottom: 0;
 }
+
+/* Main Styles */
+
+main {
+    /* Background pattern from Subtle Patterns */
+    background-image: url("../images/dust_scratches.png");
+}
+
+.main_content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+h2, h3 {
+    color: #4aaaa5; 
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin: 0 20px 0 20px;
+}
+
+h2 {
+    font-size: 25px;
+    border-bottom: 3px solid #cccccc;
+}
+
+h3 {
+    font-size: 23px;
+    border-bottom: 1px solid #cccccc;
+}
+
+section {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+}
+
+aside {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+}
+
+aside ul {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+aside img {
+    width: 60px;
+}
