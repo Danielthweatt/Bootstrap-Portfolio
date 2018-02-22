@@ -18,6 +18,10 @@ body {
     color: #777777;
 }
 
+a:hover {
+    opacity: 0.5;
+}
+
 /* Header Style */
 
 header {
@@ -73,6 +77,19 @@ h3 {
     border-bottom: 1px solid #cccccc;
 }
 
+h4 {
+    color: #ffffff;
+    background-color:#4aaaa5; 
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-size: 23px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 2%;
+}
+
 section {
     background-color: #ffffff;
     border: 1px solid #dddddd;
@@ -84,7 +101,7 @@ section {
     overflow: auto;
 }
 
-section img {
+.me {
     float: left;
     margin-right: 20px;
 }
@@ -114,6 +131,29 @@ input[type=submit] {
     border: none;
     font-size: 16px;
     padding: 10px 30px;
+}
+
+section a {
+    float: left;
+    margin-bottom: 50px;
+    width: 45%;
+}
+
+section a:nth-child(even) {
+    float: right;
+}
+
+section a:last-child {
+    margin-bottom: 0;
+}
+
+section a div {
+    width: 100%;
+    position: relative;
+}
+
+section a img {
+    width: 100%;
 }
 
 aside {
