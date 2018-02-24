@@ -139,12 +139,12 @@ section a {
     width: 45%;
 }
 
-section a:nth-child(even) {
+section a:nth-of-type(even) {
     float: right;
 }
 
-section a:last-child {
-    margin-bottom: 0;
+section a:last-of-type {
+    margin-bottom: 20px;
 }
 
 section a div {
