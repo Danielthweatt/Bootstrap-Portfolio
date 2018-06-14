@@ -23,12 +23,12 @@ router.post("/message", function(req, res){
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "",
-            pass: ""
+            user: "danielsportfolio192@gmail.com",
+            pass: "DansPortfolio153"
         }
     }); 
     const mailOptions = {
-        from: "",
+        from: "danielsportfolio192@gmail.com",
         to: "dthweatt192@gmail.com",
         subject: "New Message Via Portfolio",
         text: "Name of Sender: " + req.body.name + "\nEmail Address: " + req.body.email + "\nMessage: " + req.body.message
