@@ -42,8 +42,30 @@ h1 {
 }
 
 nav {
-    margin-top: 15px;
-    margin-bottom: 0;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+nav li {
+    display: inline-block;
+    border-right: 1px solid #cccccc;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+nav li:first-child {
+    padding-left: none;
+}
+
+nav li:last-child {
+    border-right: none;
+    padding-right: none;
+}
+
+nav a {
+    color: #777777;
+    text-decoration: none;
 }
 
 /* Main Styles */
@@ -54,8 +76,8 @@ main {
 }
 
 .main_content {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 h2, h3 {
@@ -180,10 +202,28 @@ footer {
     padding-bottom: 35px;
 }
 
+@media screen and (max-width: 992px) {
+    .main_content {
+        margin-left: 65px;
+        margin-right: 65px;
+    }
+
+    #aside {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main_content {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
 @media screen and (max-width: 550px) {
     h4 {
         font-size: 18px;
         padding-top: 5px;
         padding-bottom: 5px;
     }
-  }
+}
