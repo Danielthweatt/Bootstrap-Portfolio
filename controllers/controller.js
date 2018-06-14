@@ -1,6 +1,7 @@
 // Dependencies
 const express = require("express");
 const path = require("path");
+const nodemailer = require('nodemailer');
 
 // Router Setup
 const router = express.Router();
@@ -19,8 +20,27 @@ router.get("/contact", function(req, res){
 });
 
 router.post("/message", function(req, res){
-    console.log(req.body);
-    res.status(200).end();
+    const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+            user: "",
+            pass: ""
+        }
+    }); 
+    const mailOptions = {
+        from: "",
+        to: "dthweatt192@gmail.com",
+        subject: "New Message Via Portfolio",
+        text: "Name of Sender: " + req.body.name + "\nEmail Address: " + req.body.email + "\nMessage: " + req.body.message
+    };
+    transporter.sendMail(mailOptions, function(err, info){
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('Email sent: ' + info.response);
+            res.status(200).end();
+        }
+    });
 });
 
 // Export

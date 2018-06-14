@@ -101,13 +101,13 @@
                     email: $("#email").val().trim(),
                     message: $("#message").val().trim()
                 };
+                $("#name").val("");
+                $("#email").val("");
+                $("#message").val("");
                 $.ajax("/message", {
                     type: "POST",
                     data: newMessage
                 }).then(function(){
-                    $("#name").val("");
-                    $("#email").val("");
-                    $("#message").val("");
                     $("#myModal").modal("show");
                 });
             });
