@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Daniel</title>
+    <title>Daniel's Portfolio</title>
 
     <!-- reset styles -->
-    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- other styles -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body class="container-fluid">
     <header class="row">
@@ -20,31 +20,49 @@
         <div class="col-sm-2 col-md-3 col-lg-4"></div>
         <nav class="col-sm-4 col-md-3 text-center">
             <ul>
-                <li><a href="./index.html">About</a></li>
-                <li><a href="./portfolio.html">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main class="row">
         <div class="col-md-1"></div>
         <section class="col-md-6 main_content">
-            <h2>Contact</h2>
-            <form class="content">
-                <label> Name <br>
-                    <input type="text" name="Name" placeholder="John Smith">
-                    <br>
-                </label>
-                <label> Email <br>
-                    <input type="email" name="Email" placeholder="example@gmail.com">
-                    <br>
-                </label>
-                <label> Message <br>
-                    <textarea name="Message" rows="10"> </textarea>
-                    <br>
-                </label>
-                <input type="submit" value="Submit">
-            </form>
+            <h2>Portfolio</h2>
+            <div class="content">
+                <!-- Placeholder images from LoremPixel -->
+                <a href="#">
+                    <div>
+                        <img class="img-responsive" src="./assets/images/abstract-q-c-200-150-2.jpg" alt="Hangman">
+                        <h4 class="text-center">Hangman</h4>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <img class="img-responsive" src="./assets/images/abstract-q-c-200-150-4.jpg" alt="RPG Game">
+                        <h4 class="text-center">RPG Game</h4>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <img class="img-responsive" src="./assets/images/abstract-q-c-200-150-5.jpg" alt="Trivia Game">
+                        <h4 class="text-center">Trivia Game</h4>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <img class="img-responsive" src="./assets/images/abstract-q-c-200-150-8.jpg" alt="Rutgers Info Widget">
+                        <h4 class="text-center">Rutgers Info Widget</h4>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <img class="img-responsive" src="./assets/images/abstract-q-c-200-150-9.jpg" alt="Rock Paper Scissors">
+                        <h4 class="text-center">Rock Paper Scissors</h4>
+                    </div>
+                </a>
+            </div>
         </section>
         <div class="col-md-1"></div>
         <aside class="col-md-3 main_content" id="aside">
@@ -70,7 +88,7 @@
         </aside>
     </main>
     <footer class="row text-center">
-        &copy; Copyright 2018 Daniel Thweatt 
+        &copy; Copyright 2018 Daniel Thweatt
     </footer>
 </body>
 </html>

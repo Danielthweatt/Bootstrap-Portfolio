@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Daniel</title>
+
+    <!-- reset styles -->
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- other styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="container-fluid">
+    <header class="row">
+        <div class="col-sm-1"></div>
+        <h1 class="col-sm-4 col-lg-3">Daniel Thweatt</h1>
+        <div class="col-sm-2 col-md-3 col-lg-4"></div>
+        <nav class="col-sm-4 col-md-3 text-center">
+            <ul>
+                <li><a href="/">About</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="row">
+        <div class="col-md-1"></div>
+        <section class="col-md-6 main_content">
+            <h2>Contact</h2>
+            <form class="content" name="Message-Form" id="message-form">
+                <label> Name <br>
+                    <input type="text" name="Name" id="name">
+                    <br>
+                </label>
+                <label> Email <br>
+                    <input type="email" name="Email" id="email">
+                    <br>
+                </label>
+                <label> Message <br>
+                    <textarea name="Message" id="message" rows="10"> </textarea>
+                    <br>
+                </label>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <div class="col-md-1"></div>
+        <aside class="col-md-3 main_content" id="aside">
+            <h3 class="text-center">Connect with Me</h3>
+            <ul class="list-inline text-center">
+                <!-- Icons from IconFinder -->
+                <li>
+                    <a href="https://github.com/Danielthweatt" target="_blank">
+                        <img src="./assets/images/icon-social-github-128.png" alt="GitHub">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/daniel-thweatt-21718114b/" target="_blank">
+                        <img src="./assets/images/linkedin_square_color-128.png" alt="LinkedIn">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://stackoverflow.com/story/danielthweatt" target="_blank">
+                        <img src="./assets/images/stackoverflow-128.png" alt="Stack Overflow">
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </main>
+    <footer class="row text-center">
+        &copy; Copyright 2018 Daniel Thweatt 
+    </footer>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Message Sent</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Thank you!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap's compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $("#myModal").on("hidden.bs.modal", function(){
+                location.assign("/");
+            });
+            $("#message-form").on("submit", function(event){
+                event.preventDefault();
+                const newMessage = {
+                    name: $("#name").val().trim(),
+                    email: $("#email").val().trim(),
+                    message: $("#message").val().trim()
+                };
+                $.ajax("/message", {
+                    type: "POST",
+                    data: newMessage
+                }).then(function(){
+                    $("#name").val("");
+                    $("#email").val("");
+                    $("#message").val("");
+                    $("#myModal").modal("show");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
