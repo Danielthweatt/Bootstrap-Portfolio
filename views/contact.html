@@ -112,6 +112,9 @@
                     data: newMessage
                 }).then(function(){
                     $("#myModal").modal("show");
+                }).catch(function(err){
+                    console.log("Oh boy, it broke: ");
+                    console.log(err);
                 });
             });
         });

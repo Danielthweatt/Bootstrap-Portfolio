@@ -36,9 +36,10 @@ router.post("/message", function(req, res){
     transporter.sendMail(mailOptions, function(err, info){
         if (err) {
             console.log(err);
+            res.status(500).send("Unable to send message.");
         } else {
             console.log("Email sent: " + info.response);
-            res.status(200).end();
+            res.status(200).send("Success");
         }
     });
 });
